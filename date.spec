@@ -1,11 +1,11 @@
 Summary:	A date and time library based on the C++11/14/17 <chrono> header
 Name:		date
-Version:	3.0.1
+Version:	3.0.3
 Release:	1
 License:	MIT
 Group:		Development/Libraries
 Source0:	https://github.com/HowardHinnant/date/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	78902f47f7931a3ae8a320e0dea1f20a
+# Source0-md5:	7f59eea1aefddaa6fa0a808c12afceca
 URL:		https://howardhinnant.github.io/date/date.html
 BuildRequires:	cmake >= 3.7
 BuildRequires:	libstdc++-devel >= 6:5
@@ -56,7 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %dir %{_includedir}/date
-%{_includedir}/date/date.h
-%{_includedir}/date/tz.h
+%{_includedir}/date/*.h
 %{_libdir}/cmake/date
 %{_libdir}/libdate-tz.so
